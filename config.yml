@@ -31,14 +31,16 @@ params:
     defaultTheme: auto # dark, light
     disableThemeToggle: false
 
+    ShowAllPagesInArchive: true
     ShowReadingTime: true
-    ShowShareButtons: false
+    ShowShareButtons: true
     disableSpecial1stPost: true
     displayFullLangName: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: true
     ShowToc: true
+    tocopen: false  # 让TOC显示但自动收起
     comments: true
     mainSections:
         - posts
