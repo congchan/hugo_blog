@@ -1,0 +1,132 @@
+baseURL: "https://congchan.github.io/"
+title: Fly me to the Moon
+paginate: 10
+theme: PaperMod
+defaultContentLanguage: en
+
+permalinks:
+    posts: /archives/:slug/
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+# googleAnalytics: UA-123-45
+
+minify:
+    disableXML: true
+    minifyOutput: false
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    #title: iblog.zone
+    description: ""
+    author: Cong
+    # author: ["Me", "You"] # multiple authors
+    #images: ["<link or path of image for opengraph, twitter-cards>"]
+    DateFormat: "2006-01-02"
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: true
+    ShowShareButtons: false
+    disableSpecial1stPost: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowToc: true
+    comments: true
+    mainSections:
+        - posts
+
+
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "/images/favicon.ico"
+        favicon16x16: "<link / abs url>"
+        favicon32x32: "<link / abs url>"
+        apple_touch_icon: "<link / abs url>"
+        safari_pinned_tab: "<link / abs url>"
+
+    #label:
+    #    text: "iblog.zone"
+    #    icon: 
+    #    iconHeight: 35
+
+    # profile-mode
+    #profileMode:
+    #    enabled: false # needs to be explicitly set
+    #    title: ExampleSite
+    #    subtitle: "This is subtitle"
+    #    imageUrl: "<img location>"
+    #    imageWidth: 120
+    #    imageHeight: 120
+    #    imageTitle: my image
+    #    buttons:
+    #        - name: Posts
+    #          url: posts
+    #        - name: Tags
+    #          url: tags
+
+    # home-info mode
+    #homeInfoParams:
+    #    Title: "Hi there \U0001F44B"
+    #    Content: Welcome to my blog
+
+    cover:
+        hidden: true # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+
+    # for search
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+menu:
+    main:
+        - identifier: home
+          name: Home
+          url: /
+          weight: 5
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 15
+        - identifier: archives
+          name: Archives
+          url: /archives/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 30
+# for search
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+taxonomies:
+    category: categories
+    tag: tags
+    series: series
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
