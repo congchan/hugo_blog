@@ -2,7 +2,7 @@ baseURL: "https://congchan.github.io/"
 title: Fly me to the Moon
 paginate: 10
 theme: PaperMod
-defaultContentLanguage: en
+defaultContentLanguage: en-us
 
 permalinks:
     posts: /archives/:slug/
@@ -14,7 +14,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 
-# googleAnalytics: UA-123-45
+googleAnalytics: G-JEPTGNZ7TJ
 
 minify:
     disableXML: true
@@ -23,7 +23,7 @@ minify:
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     #title: iblog.zone
-    description: ""
+    description: "Hi, this is Cong. I’m documenting my learning notes in this blog."
     author: Cong
     # author: ["Me", "You"] # multiple authors
     #images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -76,9 +76,16 @@ params:
     #          url: tags
 
     # home-info mode
-    #homeInfoParams:
-    #    Title: "Hi there \U0001F44B"
-    #    Content: Welcome to my blog
+    homeInfoParams:
+        Title: "Welcome to Cong's Log"
+        Content: >
+            Hi, this is Cong. I’m documenting my learning notes in this blog.
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/congchan"
+        - name: Rss
+          url: "index.xml"
 
     cover:
         hidden: true # hide everywhere but not in structured data
@@ -100,22 +107,19 @@ menu:
           name: Home
           url: /
           weight: 5
-        - identifier: categories
-          name: Categories
-          url: /categories/
-          weight: 15
         - identifier: archives
           name: Archives
           url: /archives/
           weight: 10
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 20
         - identifier: search
           name: Search
           url: /search/
           weight: 30
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        
 # for search
 outputs:
     home:
