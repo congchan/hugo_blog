@@ -1,9 +1,8 @@
+---
 title: Java 类的继承扩展 Extends
 date: 2017-02-25
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## 类的继承扩展
 定义class之间的层次关系.

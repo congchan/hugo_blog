@@ -1,12 +1,9 @@
+---
 title: Entity Linking
 date: 2020-01-02
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
-- Entity Linking
+author: "Cong Chan"
+tags: ['NLP', 'Entity Linking']
 ---
 
 Entity Linking

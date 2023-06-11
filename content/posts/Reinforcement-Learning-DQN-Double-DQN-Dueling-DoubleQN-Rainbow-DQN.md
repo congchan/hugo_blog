@@ -1,14 +1,9 @@
+---
 title: DQN, Double DQN, Dueling DoubleQN, Rainbow DQN
 date: 2021-03-09
 mathjax: true
-categories:
-- AI
-- RL
-tags:
-- RL
-- DQN
-- DDQN
-- DDDQN
+author: "Cong Chan"
+tags: ['RL', 'DQN', 'DDQN', 'DDDQN']
 ---
 
 深度强化学习DQN和Natural DQN, Double DQN, Dueling DoubleQN, Rainbow DQN 的演变和必看论文.

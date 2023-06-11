@@ -1,9 +1,8 @@
+---
 title: Java 02 | 语法基础
 date: 2016-12-20
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## Java基本语法
 ```java

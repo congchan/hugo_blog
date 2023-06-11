@@ -1,19 +1,13 @@
+---
 title: Best practice to define Reward Model with HuggingFace transformers
 date: 2023-05-30
 mathjax: true
-categories:
-- AI
-tags:
-- LLM
-- Reward Modeling
-- RLHF
+author: "Cong Chan"
+tags: ['LLM', 'Reward Modeling', 'RLHF']
 ---
 [Cong Chen](https://congchan.github.io/)  
 University of Edinburgh
 
-*Started writing on May 25 2023*
-*Released in May 30 2023*
----
 There are various implementation of reward modeling in RLHF(reinforcement learning with human feedback), each has different pros and cons. Inspired by some open-sourced works about reward modeling, I would like to share one of the best practice for reward modeling. For those who are not familiar with reward modeling and RLHF, I recommend take a look at the Huggingface rlhf blog[^1] or OpenAI rlhf paper[^2]. 
 
 <!-- more -->

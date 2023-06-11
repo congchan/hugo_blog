@@ -1,10 +1,8 @@
+---
 title: Python之奇技淫巧
 date: 2017-02-22
-categories:
-- CS
-tags:
-- Python
-- Programming Language
+author: "Cong Chan"
+tags: ['Python', 'Programming Language']
 ---
 FBI WARNING 这不是python入门 
 

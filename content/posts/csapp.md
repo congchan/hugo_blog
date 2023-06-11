@@ -1,10 +1,8 @@
+---
 title: Computer Systems - A Programmer's Perspective (CSAPP) - CMU 15213
 date: 2018-01-29
-categories:
-- CS
-tags:
-- csapp
-- C
+author: "Cong Chan"
+tags: ['csapp', 'C']
 ---
 
 > CSAPP 非常巧妙的把程序设计及优化、数字电路基础、指令集体系、汇编语言、存储器体系结构、链接与装载、进程、虚存等来自不同学科的核心知识点和在一起，并以程序员的视角呈现; 告诉我们作为一个程序员，究竟需要对计算机的硬件了解到什么程度？

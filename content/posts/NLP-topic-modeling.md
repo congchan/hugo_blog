@@ -1,11 +1,9 @@
+---
 title: Topic Modelling - 主题建模以及隐变量模型
 date: 2017-12-23
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
+author: "Cong Chan"
+tags: ['NLP']
 ---
 本篇介绍 topic modeling, 以及一个经典的算法Latent Dirichlet allocation, 文本挖掘与语义理解的集大成者(至少在深度学习统治之前). 当然LDA不仅仅局限于文本, 还可应用于涉及大量数据集的各种问题，包括协同过滤，基于内容的图像检索和生物信息学等领域的数据。
 <!-- more -->
@@ -102,7 +100,7 @@ PLSA有助于处理多义词(Polysemous words), 通过$P(w|z)$排序比较, 比�
 
 LDA对主题分布的基本设定是, 每个文档被表达为latent variables(topics)的随机混合, 其中各个topics可以由单词的概率分布来描述.
 
-对于语料库$D$中的每个文档$\boldsymbol{w}$, LDA假设如下的生成过程:
+对于语料库$D$中的每个文档$\mathbb{w}$, LDA假设如下的生成过程:
 1. 选择参数$N ∼ Poisson(ξ)$,
 2. 用Dirichlet分布$Dir(\alpha)$生成一个多项式分布参数$θ$, 即$p(θ|\alpha)$
 3. 对于文档中的每一个词$w_n$:
@@ -111,11 +109,11 @@ LDA对主题分布的基本设定是, 每个文档被表达为latent variables(t
 
 这个过程做了几个假设. 一个是, $\beta$作为单词概率的参数, 是一个$k \times V$的矩阵, $\beta_{ij} = p(w^j = 1 | z^i = 1)$, 是需要估计的固定变量. 这里要注意，$N$是独立于所有其他数据生成变量（$θ$和$z$）, 因此是一个辅助变量，通常会忽略它的随机性。其余的假设有兴趣可以去读论文.
 
-给定了参数$\alpha$和$\beta$, 可以估计topic mixture θ，一组$N$个主题$\boldsymbol{z}$和一组$N$个单词$\boldsymbol{w}$的联合分布: $$ p(θ,\boldsymbol{z}, \boldsymbol{w}|α,β) = p(θ|α) \prod^N_{n=1} p(z_n | \theta) p(w_n|z_n, \beta) $$
+给定了参数$\alpha$和$\beta$, 可以估计topic mixture θ，一组$N$个主题$\mathbb{z}$和一组$N$个单词$\mathbb{w}$的联合分布: $$ p(θ,\mathbb{z}, \mathbb{w}|α,β) = p(θ|α) \prod^N_{n=1} p(z_n | \theta) p(w_n|z_n, \beta) $$
 
-$p(z_n |θ)$在这里就是第$i$个$\theta_i$, 这个独特的$i$使得$z^i_n = 1$. 沿着$θ$求积分并在$z$上求和，得到文档的 marginal distribution $$p(\boldsymbol{w}|α,β) = \int p(θ|α) \Bigg( \prod\limits^N_{n=1} \sum\limits_{z_n} p(z_n | \theta) p(w_n|z_n, \beta)  \Bigg) d\theta$$
+$p(z_n |θ)$在这里就是第$i$个$\theta_i$, 这个独特的$i$使得$z^i_n = 1$. 沿着$θ$求积分并在$z$上求和，得到文档的 marginal distribution $$p(\mathbb{w}|α,β) = \int p(θ|α) \Bigg( \prod\limits^N_{n=1} \sum\limits_{z_n} p(z_n | \theta) p(w_n|z_n, \beta)  \Bigg) d\theta$$
 
-最后，取各个文档的marginal distribution的乘积，得到整个语料库(corpus)的概率 $$ p(D|α,β)  = \prod\limits^M_{d=1} p(\boldsymbol{w}|α,β) $$
+最后，取各个文档的marginal distribution的乘积，得到整个语料库(corpus)的概率 $$ p(D|α,β)  = \prod\limits^M_{d=1} p(\mathbb{w}|α,β) $$
 
 参数$\alpha$和$\beta$是语料库级别的参数，假定在生成语料库的过程中只采样一次。$\theta_d$是文档级别的变量, 每个文档采样一次. $z_{dn}$和$w_{dn}$是词级别的变量, 每个文档的每个词采样一次.
 
@@ -129,9 +127,9 @@ LDA通过将主题混合权重视为k-parameter隐随机变量，而不是与训
 
 ### LDA推理和参数估计
 LDA推理关键的一步是计算给定的一个文档的隐变量的后验分布(posterior distribution): $$
-p(θ, \boldsymbol{z} | \boldsymbol{w}, α, β) = \frac{p(θ, \boldsymbol{z}, \boldsymbol{w} | α, β)}{p( \boldsymbol{w} | α, β)} $$
+p(θ, \mathbb{z} | \mathbb{w}, α, β) = \frac{p(θ, \mathbb{z}, \mathbb{w} | α, β)}{p( \mathbb{w} | α, β)} $$
 
-其中的$p(\boldsymbol{w}|α,β)$由于latent topics的求和中$θ$和$β$之间的耦合而变得很难求解(Dickey, 1983). 尽管因为后验分布导致精确的推理是很难，但对于LDA，可以考虑使用各种近似算法，包括Laplace逼近，变分(variational)逼近和Markov chain Monte Carlo(Jordan, 1999)。
+其中的$p(\mathbb{w}|α,β)$由于latent topics的求和中$θ$和$β$之间的耦合而变得很难求解(Dickey, 1983). 尽管因为后验分布导致精确的推理是很难，但对于LDA，可以考虑使用各种近似算法，包括Laplace逼近，变分(variational)逼近和Markov chain Monte Carlo(Jordan, 1999)。
 
 论文中介绍了一种convexity-based variational inference方法, 基本思想是利用Jensen’s inequality获得log likelihood的可调下限(Jordan, et al., 1999)
 

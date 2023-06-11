@@ -1,10 +1,8 @@
+---
 title: Python Digest
 date: 2018-05-08
-categories:
-- CS
-tags:
-- Python
-- Programming Language
+author: "Cong Chan"
+tags: ['Python', 'Programming Language']
 ---
 What you will get from this Python digest:
 1, Learn advanced python programming.

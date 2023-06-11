@@ -1,12 +1,9 @@
+---
 title: 单模式匹配与拼写检查 - Trie
 date: 2017-09-28
 mathjax: true
-categories:
-- CS
-tags:
-- String
-- Algorithms
-- Trie
+author: "Cong Chan"
+tags: ['String', 'Algorithms', 'Trie']
 ---
 Trie 也称字典树，名称来源于Re<font color="red">trie</font>val，支持$O(n)$插入和查询操作，以空间换取时间的数据结构. 用于词频统计和输入统计领域, 可以高效地存储大规模的字典数据, 也可以用于模糊匹配, 搜索最长前缀词等.
 > A **trie**, also called **digital tre**e, **radix tree** or **prefix tree** is a kind of search tree - an ordered tree data structure used to store a dynamic set or associative array where the keys are usually strings. Unlike a binary search tree, no node in the tree stores the key associated with that node; instead, its position in the tree defines the key with which it is associated. All the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string. Keys tend to be associated with leaves, though some inner nodes may correspond to keys of interest. Hence, keys are not necessarily associated with every node.

@@ -1,11 +1,9 @@
+---
 title: 深入理解word2vec
 date: 2018-06-22
 mathjax: true
-categories:
-- CS
-tags:
-- Python
-- Programming Language
+author: "Cong Chan"
+tags: ['Python', 'Programming Language']
 ---
 
 Word2vec [Mikolov et al.](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)

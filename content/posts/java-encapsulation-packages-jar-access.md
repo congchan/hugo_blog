@@ -1,9 +1,8 @@
+---
 title: Java 封装, 包, JAR, 权限控制
 date: 2017-05-29
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## Encapsulation
 封装是面向对象编程的基本原则之一，也是程序员处理复杂性一个方法。管理复杂性是编写大型程序时必须面对的主要挑战之一。

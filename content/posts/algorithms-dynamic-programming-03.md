@@ -1,12 +1,9 @@
+---
 title: Dynamic Programming 03 - 最长公共子序列
 date: 2017-09-03
 mathjax: true
-categories:
-- CS
-tags:
-- Java
-- Algorithms
-- Dynamic Programming
+author: "Cong Chan"
+tags: ['Java', 'Algorithms', 'Dynamic Programming']
 ---
 ## 最长公共子序列
 对于一个字符串, 它的子序列，就是将给字符串中任意个元素去掉之后剩余的字符串, 所以子序列不要求是连续的, 但是维持原来的顺序. 在文本相似度比较中，常用到最长公共子序列（longest common sequence）。

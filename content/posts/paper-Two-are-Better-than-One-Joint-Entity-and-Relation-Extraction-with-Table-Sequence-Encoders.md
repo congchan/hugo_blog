@@ -1,15 +1,9 @@
+---
 title: Two are Better than One - Joint Entity and Relation Extraction with Table-Sequence Encoders
 date: 2021-03-27
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- 2020
-- EMNLP
-- Extraction
-
+author: "Cong Chan"
+tags: ['NLP', '2020', 'EMNLP', 'Extraction']
 ---
 
 2020, EMNLP

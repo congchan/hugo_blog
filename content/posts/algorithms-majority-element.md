@@ -1,12 +1,9 @@
+---
 title: 众数问题 - Boyer–Moore majority vote algorithm
 date: 2017-10-03
 mathjax: true
-categories:
-- CS
-tags:
-- Java
-- Algorithms
-- Dynamic Programming
+author: "Cong Chan"
+tags: ['Java', 'Algorithms', 'Dynamic Programming']
 ---
 数组中有一个数字出现的次数超过数组长度的一半，例如输入一个长度为9的数组`1,2,3,2,2,2,5,4,2`。由于数字2在数组中出现了5次，超过数组长度的一半，因此输出2。如果不存在则输出0。因为这个数出现次数超过了数组长度一半以上, 那么它就是数组中出现次数最多的数, 故谓之**众数**.
 <!-- more -->

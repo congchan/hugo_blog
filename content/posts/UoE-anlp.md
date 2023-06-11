@@ -1,13 +1,9 @@
-title: Accelerated Natural Language Processing
+---
+title: Inf Course Note - Accelerated Natural Language Processing
 date: 2017-09-31
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
-- Python
-- course-note
+author: "Cong Chan"
+tags: ["NLP", "Inf Course Note"]
 ---
 爱丁堡大学信息学院课程笔记 Accelerated Natural Language Processing, Informatics, University of Edinburgh
 

@@ -1,18 +1,14 @@
+---
 title: Boosting LLMs Alignment - A Data-Driven Bootstrap Flywheel
 date: 2023-04-25
-mathjax: true
-categories:
-- AI
-tags:
-- LLM
-- RLHF
+author: "Cong Chan"
+tags: ["LLM", "RLHF"]
 ---
+
 [Cong Chen](https://congchan.github.io/)  
 University of Edinburgh
 
-*Started writing on Apr 25 2023*
-*Released in May 04 2023*
----
+
 InstructGPT[^1], ChatGPT[^2], and GPT-4[^3] are cutting-edge Large Language Models (LLMs) that have astounded the world. With their ability to follow human instructions and align with human preferences, they can act as chatbots or helpful assistants. Despite impressing people for a while, their development lifecycles have not yet been thoroughly elaborated.
 
 In this blog, I will provide my observations and thoughts based on my recent experience with large language model training and alignment. Instead of introducing these LLMs and highlighting their impressive performance, I will focus on the bootstrap flywheel that continuously improving these models. The bootstrap flywheel is showed in below graph with further illustration in this post.
@@ -22,7 +18,7 @@ In this blog, I will provide my observations and thoughts based on my recent exp
 
 # Cold Starts
 
-To kickstart the process, it is essential to obtain a pre-trained LLM. One option is to pre-train an LLM from scratch. An alternative approach is to use a pre-trained LLM that has already undergone extensive training on diverse sets of text data. Open-source pre-trained LLMs, such as LLaMA[^4][^5] and BLOOM[^6][^7], have gained a comprehensive understanding of word associations and contextual nuances. Due to their expertise, these models are already capable of generating natural-sounding text.
+To kickstart the process, it is essential to obtain a pre-trained LLM. One option is to pre-train an LLM from scratch. An alternative approach is to use a pre-trained LLM that has already undergone extensive training on diverse sets of text data. Open-source pre-trained LLMs, such as LLaMA[^4],[^5] and BLOOM[^6],[^7], have gained a comprehensive understanding of word associations and contextual nuances. Due to their expertise, these models are already capable of generating natural-sounding text.
 
 ## Instruction-tuning on Demonstration Data
 
@@ -36,7 +32,7 @@ The outcomes are truly thrilling! We got a highly refined instruction-tuned LLM 
 
 # Alignment
 
-While the SFT model delivers impressive results, it is prone to some challenging issues. For example, it can generate hallucinations[^10][^11], falls into traps or gives inappropriate or even dangerous suggestions. Therefore, to ensure the model works effectively with a broad range of users and environments, it must meet a high standard of compliance. This means it shouldn't only follow instructions but also communicate in a way that aligns with most people's preferences. These cases occur frequently and demonstrate that the model requires further refinement before it can be made available for public use.
+While the SFT model delivers impressive results, it is prone to some challenging issues. For example, it can generate hallucinations[^10],[^11], falls into traps or gives inappropriate or even dangerous suggestions. Therefore, to ensure the model works effectively with a broad range of users and environments, it must meet a high standard of compliance. This means it shouldn't only follow instructions but also communicate in a way that aligns with most people's preferences. These cases occur frequently and demonstrate that the model requires further refinement before it can be made available for public use.
 
 ## Learning from Human Feedback
 

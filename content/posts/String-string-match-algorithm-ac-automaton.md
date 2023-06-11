@@ -1,13 +1,9 @@
+---
 title: “和谐” - 多模式匹配算法 - AC自动机
 date: 2017-09-29
 mathjax: true
-categories:
-- CS
-tags:
-- String
-- Algorithms
-- Trie图
-- AC自动机
+author: "Cong Chan"
+tags: ['String', 'Algorithms', 'Trie图', 'AC自动机']
 ---
 虽然KMP可以用于[单模式匹配问题](/NLP-01-string-searching-algorithm-01-kmp)，但如果是多模式问题, KMP的性能就得不到保证。比如根据墙内法律要求, 墙内的搜索引擎需要过滤敏感词后才能合法运营。敏感词的数量不少, 如果要求包含敏感词的网页不能被搜索到, 那么搜索引擎在爬取网页信息时, 就要标记网页的文本中是否包含任意个敏感词.
 <!-- more -->

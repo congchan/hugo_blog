@@ -1,10 +1,8 @@
+---
 title: Java 11 | 测试 Testing
 date: 2017-01-29
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java']
 ---
 ## 测试
 如何知道自己的程序是否真的在工作？在现实世界中，程序员相信他们的代码，因为代码通过了他们自己编写的测试。常用的测试有 Ad Hoc Testing， Unit test 和 Integration Testing。

@@ -1,13 +1,9 @@
+---
 title: Find All Collinear Points - A Pattern Recognition Problem
 date: 2018-08-04
 mathjax: true
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
-- Algorithms
-- Sorting
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java', 'Algorithms', 'Sorting']
 ---
 ## The Line Patterns Recognition
 A basic but important application of pattern recognition is to recognize line patterns in a given set of points. http://coursera.cs.princeton.edu/algs4/assignments/collinear.html. This blog will give a breif introduction to this problem and provide an enfficient solution. Codes available in [algs4/collinear/src/](https://github.com/congchan/algs4)

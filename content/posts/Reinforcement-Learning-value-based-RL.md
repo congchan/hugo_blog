@@ -1,11 +1,9 @@
+---
 title: Value-based Reinforcement Learning
 date: 2018-07-10
 mathjax: true
-categories:
-- AI
-- RL
-tags:
-- RL
+author: "Cong Chan"
+tags: ['RL']
 ---
 
 # **时序决策**

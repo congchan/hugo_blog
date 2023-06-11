@@ -1,15 +1,9 @@
+---
 title: Switch Transformers - Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
 date: 2021-07-10
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- 2021
-- MOE
-- Transformers
-
+author: "Cong Chan"
+tags: ['NLP', '2021', 'MOE', 'Transformers']
 ---
 
 Links: https://arxiv.org/abs/2101.03961

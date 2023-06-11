@@ -1,10 +1,8 @@
+---
 title: Java 04 | 类 class - 02 类与实例
 date: 2016-12-24
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java']
 ---
 ## Class
 类的方法和变量细分为静态的和非静态的. 静态就是可以被类调用，所以静态方法/变量也称之为类方法/变量；非静态只能由实例调用，所以也称之为实例方法/变量。

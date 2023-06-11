@@ -1,13 +1,9 @@
+---
 title: 信息处理 - 数据压缩 - 哈夫曼编码
 date: 2017-10-12
 mathjax: true
-categories:
-- CS
-tags:
-- Algorithms
-- Information Retrieval
-- Data Compression
-- Huffman Compression
+author: "Cong Chan"
+tags: ['Algorithms', 'Information Retrieval', 'Data Compression', 'Huffman Compression']
 ---
 ## 避免歧义的编码
 在构建压缩编码的对应关系时，我们使用不同的数量的位来编码不同的字符.

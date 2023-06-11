@@ -1,10 +1,8 @@
+---
 title: Java 07 | 数据结构 - 用数组构建数据列表 list
 date: 2016-12-29
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java']
 ---
 ## 列表
 List

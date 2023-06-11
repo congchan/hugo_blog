@@ -1,11 +1,9 @@
+---
 title: BERT的Adam Weight Decay
 date: 2019-03-03
 mathjax: true
-categories:
-- AI
-- Machine Learning
-tags:
-- Machine Learning
+author: "Cong Chan"
+tags: ['Machine Learning']
 ---
 
 # Adam Weight Decay in BERT
@@ -85,7 +83,7 @@ x += - learning_rate * m / (np.sqrt(v) + eps)
 
 L2 regularization: 给参数加上一个L2惩罚
 $$
-f_{t}^{r e g}(\boldsymbol{\theta})=f_{t}(\boldsymbol{\theta})+\frac{\lambda^{\prime}}{2}\|\boldsymbol{\theta}\|_{2}^{2}
+f_{t}^{r e g}(\mathbb{\theta})=f_{t}(\mathbb{\theta})+\frac{\lambda^{\prime}}{2}\|\mathbb{\theta}\|_{2}^{2}
 $$
 用程序表达是:
 ```python

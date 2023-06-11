@@ -1,12 +1,9 @@
-title: Natural Language Understanding
+---
+title: Inf Course Note - Natural Language Understanding
 date: 2017-09-31
 mathjax: true
-category:
-- AI
-- NLP
-tab:
-- NLU
-- course-note
+author: "Cong Chan"
+tags: ['NLU', 'Inf Course Note']
 ---
 爱丁堡大学信息学院课程笔记 Natural Language Understanding, Informatics, University of Edinburgh
 

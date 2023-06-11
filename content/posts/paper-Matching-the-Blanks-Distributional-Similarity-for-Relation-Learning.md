@@ -1,15 +1,9 @@
+---
 title: Matching the Blanks - Distributional Similarity for Relation Learning
 date: 2021-04-21
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- 2019
-- ACL
-- Extraction
-
+author: "Cong Chan"
+tags: ['NLP', '2019', 'ACL', 'Extraction']
 ---
 
 2019, ACL 

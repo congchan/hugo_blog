@@ -1,14 +1,9 @@
+---
 title: Randomized Queue with Reservoir Sampling
 date: 2018-07-21
 mathjax: true
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
-- Algorithms
-- Reservoir Sampling
-- Fisher–Yates shuffle
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java', 'Algorithms', 'Reservoir Sampling', 'Fisher–Yates shuffle']
 ---
 
 This blog explains an apllication of randomized queue algorithms.

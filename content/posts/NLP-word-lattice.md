@@ -1,11 +1,9 @@
+---
 title: Word Lattice
 date: 2019-01-24
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
+author: "Cong Chan"
+tags: ['NLP']
 ---
 
 What is [Word Lattices](http://www.statmt.org/moses/?n=Moses.WordLattices#:~:text=A%20word%20lattice%20is%20a%20directed%20acyclic%20graph,and%20edges%20labeled%20with%20a%20word%20and%20weight.)?

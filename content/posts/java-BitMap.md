@@ -1,9 +1,8 @@
+---
 title: Java BitMap 和 Bloom Filter
 date: 2017-10-19
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## Bit Map
 Bit-map用一个bit位来标记某个元素对应的Value， 而Key即是该元素。由于采用了Bit为单位来存储数据，因此在存储空间方面，可以大大节省。

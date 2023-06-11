@@ -1,12 +1,9 @@
+---
 title: Dynamic Programming 01 - 理解动态规划
 date: 2017-09-01
 mathjax: true
-categories:
-- CS
-tags:
-- Java
-- Algorithms
-- Dynamic Programming
+author: "Cong Chan"
+tags: ['Java', 'Algorithms', 'Dynamic Programming']
 ---
 我们已经看到了一些优雅的设计原则，例如分而治之，图探索和贪婪的选择，它们为各种重要的计算任务提供了确定的算法。这些工具的缺点是只能用于非常特定类型的问题。现在我们来谈谈算法工艺的两个大锤，即动态编程和线性编程，这两种适用性非常广泛的技术可以在更专门的方法失败时调用。可以预见的是，这种普遍性通常会带来效率上的损失。
 

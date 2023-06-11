@@ -1,9 +1,8 @@
+---
 title: Java Hash Table
 date: 2017-06-19
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## Hash Tables
 Save items in a key-indexed table. Index is a function of the key - **Hash function**, method for computing array index from key.

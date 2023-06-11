@@ -1,12 +1,9 @@
+---
 title: Deep Q Networks
 date: 2019-03-10
 mathjax: true
-categories:
-- AI
-- RL
-tags:
-- RL
-- DQN
+author: "Cong Chan"
+tags: ['RL', 'DQN']
 ---
 
 Combining reinforcement learning and deep neural networks at scale. The algorithm was developed by enhancing a classic RL algorithm called Q-Learning with deep neural networks and a technique called **experience replay**.

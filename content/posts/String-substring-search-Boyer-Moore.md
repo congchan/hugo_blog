@@ -1,14 +1,9 @@
+---
 title: 字符搜索匹配算法 02 - Boyer-Moore(BM), Horspool, Sunday algorithms
 date: 2017-09-26
 mathjax: true
-categories:
-- CS
-tags:
-- String
-- Algorithms
-- Boyer-Moore
-- Horspool
-- Sunday
+author: "Cong Chan"
+tags: ['String', 'Algorithms', 'Boyer-Moore', 'Horspool', 'Sunday']
 ---
 
 ## Boyer-Moore算法

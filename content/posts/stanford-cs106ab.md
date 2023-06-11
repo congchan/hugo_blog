@@ -1,12 +1,8 @@
+---
 title: Stanford CS106A/B Programming Intro 斯坦福大学编程入门课
 date: 2017-06-23
-categories:
-- CS
-tags:
-- Software Engineer
-- C++
-- 编程
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'C++', '编程', 'Java']
 ---
 [Stanford CS106B Programming Abstractions](https://see.stanford.edu/Course/CS106B) 和 [CS106A](https://see.stanford.edu/Course/CS106A) 的学习笔记. 课程作业(cs106b spring 2017)实现代码见 [https://github.com/ShootingSpace/cs106b-programming-abstraction](https://github.com/ShootingSpace/cs106b-programming-abstraction)
 

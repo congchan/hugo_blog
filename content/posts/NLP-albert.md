@@ -1,11 +1,9 @@
+---
 title: A Lite BERT(AlBERT) 原理和源码解析
 date: 2020-01-11
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
+author: "Cong Chan"
+tags: ['NLP']
 ---
 
 ### A Lite BERT

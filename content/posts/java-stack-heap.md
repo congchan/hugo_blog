@@ -1,9 +1,8 @@
+---
 title: Java 堆栈
 date: 2017-05-29
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 认识栈和堆的概念， 有助于了解变量的有效范围（scope），对象的建立，内存管理，线程（thread）和异常处理。
 

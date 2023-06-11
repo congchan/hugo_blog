@@ -1,9 +1,8 @@
+---
 title: Java 比较对象大小
 date: 2017-05-29
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 对物品排序首先需要比较各个物品的大小, 这个大小的定义既可以是按照"自然顺序", 也可以是其他指定的特殊规则.
 <!-- more -->

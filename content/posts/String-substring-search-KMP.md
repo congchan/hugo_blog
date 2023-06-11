@@ -1,14 +1,9 @@
+---
 title: 字符搜索匹配算法 01 - Knuth–Morris–Pratt(KMP)
 date: 2017-09-26
 mathjax: true
-categories:
-- CS
-tags:
-- String
-- Algorithms
-- KMP
-- Aho–Corasick algorithm
-- Trie
+author: "Cong Chan"
+tags: ['String', 'Algorithms', 'KMP', 'Aho–Corasick algorithm', 'Trie']
 ---
 > In computer science, string-searching algorithms, sometimes called string-matching algorithms, are an important class of string algorithms that try to find a place where one or several strings (also called patterns) are found within a larger string or text.
 

@@ -1,13 +1,9 @@
+---
 title: 位操作 - 二进制操作符
 date: 2017-08-21
 mathjax: true
-categories:
-- CS
-tags:
-- Bitwise Operation
-- Software Engineer
-- Computer Science
-- Algorithms
+author: "Cong Chan"
+tags: ['Bitwise Operation', 'Software Engineer', 'Computer Science', 'Algorithms']
 ---
 在很多语言中，字符`char`类型是八位, 那么可能取值有256种(`-128 ~ -1, 0 ~ 127`). 但是用二进制表示为`0000 0000 ~ 1111 1111`, 无符号整数的全部位都表示数值，而有符号数的最高位是符号位（0表示正数，1表示负数），所以实际表达数值的只剩下`n-1`位。这样理论上`char`的取值应该是`1111 1111 = -127`到`0111 1111 = 127`. 而`-128 = 1 1000 0000`需要9位来表达, 所以`char`是如何仅仅通过八位表达`-128`?
 <!-- more -->

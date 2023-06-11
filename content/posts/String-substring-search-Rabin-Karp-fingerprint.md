@@ -1,12 +1,9 @@
+---
 title: 字符搜索匹配算法 03 Rabin-Karp Fingerprint & 字符串哈希
 date: 2017-09-27
 mathjax: true
-categories:
-- CS
-tags:
-- Algorithms
-- Rabin-Karp
-- String
+author: "Cong Chan"
+tags: ['Algorithms', 'Rabin-Karp', 'String']
 ---
 
 ## Rabin-Karp Fingerprint

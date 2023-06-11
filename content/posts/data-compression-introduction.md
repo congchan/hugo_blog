@@ -1,12 +1,9 @@
+---
 title: 信息处理 - 数据压缩
 date: 2017-10-10
 mathjax: true
-categories:
-- CS
-tags:
-- Algorithms
-- Information Retrieval
-- Data Compression
+author: "Cong Chan"
+tags: ['Algorithms', 'Information Retrieval', 'Data Compression']
 ---
 ## 数据压缩
 压缩数据以节省储存空间，节省传输时间。同时很多文件都有很多冗余信息，这为压缩提供了很多可能性。

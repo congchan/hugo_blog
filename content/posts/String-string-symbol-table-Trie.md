@@ -1,14 +1,9 @@
+---
 title: 字符串符号表和三元搜索Trie
 date: 2017-09-30
 mathjax: true
-categories:
-- CS
-tags:
-- String
-- Algorithms
-- Information Retrieval
-- Symbol table
-- Trie
+author: "Cong Chan"
+tags: ['String', 'Algorithms', 'Information Retrieval', 'Symbol table', 'Trie']
 ---
 
 ## 符号表

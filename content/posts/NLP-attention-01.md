@@ -1,12 +1,9 @@
+---
 title: 从头理解注意力机制
 date: 2018-07-10
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- Attention
-- NLP
+author: "Cong Chan"
+tags: ['Attention', 'NLP']
 ---
 
 ### 注意力机制如何起源的

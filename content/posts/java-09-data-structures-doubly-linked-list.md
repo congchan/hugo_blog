@@ -1,10 +1,8 @@
+---
 title: Java 09 | 数据结构 - 双向链表 Doubly Linked List
 date: 2017-01-13
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java']
 ---
 ## 双向链表
 Doubly Linked List

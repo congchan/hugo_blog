@@ -1,14 +1,9 @@
+---
 title: Cross-media Structured Common Space for Multimedia Event Extraction
 date: 2021-03-24
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- Multimodal
-- 2020
-- ACL
-- Event Extraction
+author: "Cong Chan"
+tags: ['Multimodal', '2020', 'ACL', 'Event Extraction']
 ---
 
 2020, ACL

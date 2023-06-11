@@ -1,9 +1,8 @@
+---
 title: Java Exceptions
 date: 2017-05-29
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## Exception-handling
 假如调用了一个不是自己写的方法, 该方法执行某些有风险的任务(当然,自己写的也可能会有风险),可能会在运行期间出状况,那么就必须认识到该方法是有风险的, 要写出可以在发生状况时做出应对的代码.

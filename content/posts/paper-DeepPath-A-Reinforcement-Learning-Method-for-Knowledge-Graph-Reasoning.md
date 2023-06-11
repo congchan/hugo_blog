@@ -1,16 +1,9 @@
+---
 title: DeepPath - A Reinforcement Learning Method for Knowledge Graph Reasoning
 date: 2020-03-11
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- RL
-- 2017
-- EMNLP
-- Knowledge Graph Reasoning
-
+author: "Cong Chan"
+tags: ['NLP', 'RL', '2017', 'EMNLP', 'Knowledge Graph Reasoning']
 ---
 
 2017, EMNLP

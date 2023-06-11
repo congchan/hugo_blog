@@ -1,10 +1,8 @@
+---
 title: Java 06 | 数据结构 - array 数组
 date: 2016-12-27
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java']
 ---
 ## 数组（Array）
 数组是一种特殊的对象，有一个固定的数组长度参数N，由一连串（N个）连续的带编号的内存块组成，每个都是相同的类型(不像Python可以包含不同类型)，索引从0到N-1编号。A[i]获得数组A的第i个元素。这与普通的类实例不同，类实例有具体变量名命名的内存块。

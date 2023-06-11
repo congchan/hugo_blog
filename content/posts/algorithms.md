@@ -1,13 +1,9 @@
+---
 title: Algorithms - Princeton
 date: 2018-01-01
 mathjax: true
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
-- algs4
-- Algorithms
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java', 'algs4', 'Algorithms']
 ---
 - Algorithms, Part I, https://online.princeton.edu/course/algorithms-part-i
 - Algorithms, Part II, https://online.princeton.edu/course/algorithms-part-ii

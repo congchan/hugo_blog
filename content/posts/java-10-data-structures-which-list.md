@@ -1,10 +1,8 @@
+---
 title: Java 10 | 数据结构 - LinkedList 还是 ArrayList
 date: 2017-01-28
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java']
 ---
 Java 提供了 `ArrayList`, `ArrayDeque` 和 `LinkedList` 几个API.
 

@@ -1,14 +1,9 @@
+---
 title: 不同树结构的字符串符号表
 date: 2017-10-01
 mathjax: true
-categories:
-- CS
-tags:
-- String
-- Algorithms
-- Information Retrieval
-- Symbol table
-- Trie
+author: "Cong Chan"
+tags: ['String', 'Algorithms', 'Information Retrieval', 'Symbol table', 'Trie']
 ---
 ## 各种树的变种
 为了适应不同的应用场景, 人们使用不同的树结构来实现符号表.

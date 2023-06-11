@@ -1,9 +1,8 @@
+---
 title: Computer Science Step by Step
 date: 2016-12-31
-categories:
-- CS
-tags:
-- CS
+author: "Cong Chan"
+tags: ['CS']
 ---
 我学习CS历程，也包含基础知识的总结以及编程实现的整理。
 

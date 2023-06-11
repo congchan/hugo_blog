@@ -1,8 +1,10 @@
+---
 title: Learn AI Step by Step
 date: 2016-12-31
-categories:
-- AI
+author: "Cong Chan"
+tags: ["Resources", "AI"]
 ---
+
 记录学习AI的学习笔记，内容包含基础知识的总结以及编程实现的整理。
 
 [English template 英文模板](https://github.com/ShootingSpace/Guide-to-Computer-Science/blob/master/readme.md)

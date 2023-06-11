@@ -1,15 +1,9 @@
+---
 title: CorefQA - Coreference resolution as query-based span prediction
 date: 2021-05-11
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- 2020
-- ACL
-- Coreference Resolution
-
+author: "Cong Chan"
+tags: ['NLP', '2020', 'ACL', 'Coreference Resolution']
 ---
 
 2020, ACL

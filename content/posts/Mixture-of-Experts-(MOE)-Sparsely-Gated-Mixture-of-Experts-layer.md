@@ -1,12 +1,9 @@
+---
 title: Mixture of Experts (MOE)
 date: 2021-07-03
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
-- MOE
+author: "Cong Chan"
+tags: ['NLP', 'MOE']
 ---
 
 # Mixture of Experts (MOE)

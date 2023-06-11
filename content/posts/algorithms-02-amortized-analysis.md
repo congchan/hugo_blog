@@ -1,14 +1,10 @@
+---
 title: Algorithms 02 - Amortized Analysis 平摊分析
 date: 2017-06-27
-mathjax: true
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
-- cs61b
-- algs4
+author: "Cong Chan"
+tags: ["algs4", "cs61b", "Software Engineer", "Java"]
 ---
+
 假如有两种交税方式：
 1. 每天付 3 金币
 2. 每次付的金币呈指数级增长，但通知付款频率呈指数级下降

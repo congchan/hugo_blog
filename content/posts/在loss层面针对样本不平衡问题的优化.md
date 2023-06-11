@@ -1,17 +1,16 @@
+---
 title: 在loss层面针对样本不平衡问题的优化
 date: 2021-05-07
+author: "Cong Chan"
+description: "针对样本不平衡问题，除了上下采样，调整样本权重等统计方法，还有可以通过对loss函数进行设计。"
+tags: ["ML", "AI"]
 mathjax: true
-categories:
-- AI
-- ML
-tags:
-- ML
 ---
 
 针对样本不平衡问题，除了上下采样，调整样本权重等统计方法，还有可以通过对loss函数进行设计。
 
 对于多分类问题（n选1），一般使用softmax；对于多标签分类问题（n选k），一般是转换为n各sigmoid二分类问题。
-<!-- more -->
+<!--more-->
 
 # Hierarchical classification
 
@@ -30,7 +29,8 @@ Focal Loss for Dense Object Detection
 
 ![/images/Untitled%201.png](/images/focal_loss.png)
 
-$\operatorname{FL}\left(p_{\mathrm{t}}\right)=-\left(1-p_{\mathrm{t}}\right)^{\gamma} \log \left(p_{\mathrm{t}}\right)$
+<div>$$\operatorname{FL}\left(p_{\mathrm{t}}\right)=-\left(1-p_{\mathrm{t}}\right)^{\gamma} \log \left(p_{\mathrm{t}}\right)$$</div>
+
 
 实现：
 [https://github.com/congchan/nlp/blob/e5cb1405b21245ad6cfe1f71a9961b6519e4e618/torch/loss.py#L5](https://github.com/congchan/nlp/blob/e5cb1405b21245ad6cfe1f71a9961b6519e4e618/torch/loss.py#L5)
@@ -163,6 +163,8 @@ L_{u n i} & \approx\left[\log \sum_{j=1}^L \exp \left(\gamma\left(s_n^j+m\right)
 & \approx \gamma\left[\max \left(s_n\right)-\min \left(s_p\right)+m\right]_\+
 \end{aligned}$
 
+(Hugo无法解析该公式)从知乎[^1]上截图如下：
+![](/images/loss_uni.PNG)
 
 对比AM Softmax做同样转化后的形式
 
@@ -232,4 +234,6 @@ LogSumExp函数值是大于等于max函数值的，而且等于取到的条件�
 - [将"softmax+交叉熵"推广到多标签分类问题](https://kexue.fm/archives/7359)
 - [如何评价Kaiming的Focal Loss for Dense Object Detection？](https://www.zhihu.com/question/63581984)
 - [将"softmax+交叉熵"推广到多标签分类问题](https://kexue.fm/archives/7359#%E7%BB%9F%E4%B8%80%E7%9A%84loss%E5%BD%A2%E5%BC%8F)
-- [如何理解与看待在cvpr2020中提出的circle loss](https://www.zhihu.com/question/382802283/answer/1114719159)
+- 
+
+[^1]: [如何理解与看待在cvpr2020中提出的circle loss](https://www.zhihu.com/question/382802283/answer/1114719159)

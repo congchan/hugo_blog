@@ -1,13 +1,9 @@
+---
 title: Percolations problem
 date: 2018-07-03
 mathjax: true
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
-- Algorithms
-- Bitwise Operation
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java', 'Algorithms', 'Bitwise Operation']
 ---
 ### Union-find applications: Percolation
 [Problem discriptions](http://coursera.cs.princeton.edu/algs4/assignments/percolation.html)

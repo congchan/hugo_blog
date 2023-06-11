@@ -1,10 +1,8 @@
+---
 title: Java 05 | 数据类型
 date: 2016-12-26
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java']
 ---
 ## 数据类型
 [数据类型](https://zh.wikibooks.org/zh-hans/Java/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)是程序设计语言描述事物、对象的方法。Java数据类型分为基本类型（内置类型）和引用类型(扩展类型）两大类。基本类型就是Java语言本身提供的基本数据类型，比如，整型数，浮点数，字符，布尔值等等。而引用类型则是Java语言根据基本类型扩展出的其他类型，Java要求所有的引用扩展类型都必须包括在类定义里面，这就是Java为什么是面向对象编程语言的原因...

@@ -1,10 +1,8 @@
+---
 title: Java 08 | 数据结构 - 单向链表 Singly Linked List
 date: 2017-01-12
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java']
 ---
 ## 链表
 Linked List

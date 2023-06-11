@@ -1,15 +1,9 @@
+---
 title: Improving Event Detection via Open-domain Trigger Knowledge
 date: 2021-03-25
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- 2020
-- ACL
-- Event Detection
-- Knowledge Distillation
+author: "Cong Chan"
+tags: ['NLP', '2020', 'ACL', 'Event Detection', 'Knowledge Distillation']
 ---
 
 2020, ACL

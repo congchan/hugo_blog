@@ -1,12 +1,9 @@
+---
 title: Dynamic Programming 05 - 跳台阶
 date: 2017-09-05
 mathjax: true
-categories:
-- CS
-tags:
-- Java
-- Algorithms
-- Dynamic Programming
+author: "Cong Chan"
+tags: ['Java', 'Algorithms', 'Dynamic Programming']
 ---
 ## 跳台阶
 跳上一个n级的台阶总共有多少种跳法，先后次序不同算不同的结果，限制条件是每次只能跳1级或者2级。

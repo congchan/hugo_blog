@@ -1,14 +1,9 @@
-title: Parallel Programming Language and Systems
+---
+title: Inf Course Note - Parallel Programming Language and Systems
 date: 2017-09-31
 mathjax: true
-category:
-- CS
-tab:
-- Software Engineer
-- Parallelism & Concurrency
-- Java
-- C
-- course-note
+author: "Cong Chan"
+tags: ['Software Engineer', 'Parallelism & Concurrency', 'Java', 'C', 'course-note', 'Inf Course Note']
 ---
 爱丁堡大学信息学院课程笔记 Parallel Programming Language and Systems, Informatics, University of Edinburgh
 

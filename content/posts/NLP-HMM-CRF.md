@@ -1,11 +1,9 @@
+---
 title: 概率图模型 - 朴素贝叶斯 - 隐马尔科夫 - 条件随机场 - 逻辑回归
 date: 2018-09-16
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
+author: "Cong Chan"
+tags: ['NLP']
 ---
 
 ## 序列标注（Sequence Labeling）
@@ -103,11 +101,11 @@ $$
 $S$是标签集.
 
 如果把问题简化为线性的相邻依赖, 那么每一个状态$s_{i}$仅依赖于前一个状态$s_{i-1}$. 用$Y$表达标签序列, 用$X$表达观察序列, 那么
-$$P\left(y_{1}, y_{2}, \ldots, y_{n} | \boldsymbol{x}\right)=P\left(y_{1} | \boldsymbol{x}\right) P\left(y_{2} | \boldsymbol{x}, y_{1}\right) P\left(y_{3} | \boldsymbol{x}, y_{2}\right) \ldots P\left(y_{n} | \boldsymbol{x}, y_{n-1}\right)$$
+$$P\left(y_{1}, y_{2}, \ldots, y_{n} | \mathbb{x}\right)=P\left(y_{1} | \mathbb{x}\right) P\left(y_{2} | \mathbb{x}, y_{1}\right) P\left(y_{3} | \mathbb{x}, y_{2}\right) \ldots P\left(y_{n} | \mathbb{x}, y_{n-1}\right)$$
 其中
-$$P\left(y_{1} | \boldsymbol{x}\right)=\frac{e^{f\left(y_{1} ; \boldsymbol{x}\right)}}{\sum_{y_{1} \in S} e^{f\left(y_{k} ; \boldsymbol{x}\right)}}, \quad P\left(y_{k} | \boldsymbol{x}, y_{k-1}\right)=\frac{e^{g\left(y_{k-1}, y_{k}\right)+f\left(y_{k} ; \boldsymbol{x}\right)}}{\sum_{y_{k} \in S} e^{g\left(y_{k-1}, y_{k}\right)+f\left(y_{k} ; \boldsymbol{x}\right)}}$$
+$$P\left(y_{1} | \mathbb{x}\right)=\frac{e^{f\left(y_{1} ; \mathbb{x}\right)}}{\sum_{y_{1} \in S} e^{f\left(y_{k} ; \mathbb{x}\right)}}, \quad P\left(y_{k} | \mathbb{x}, y_{k-1}\right)=\frac{e^{g\left(y_{k-1}, y_{k}\right)+f\left(y_{k} ; \mathbb{x}\right)}}{\sum_{y_{k} \in S} e^{g\left(y_{k-1}, y_{k}\right)+f\left(y_{k} ; \mathbb{x}\right)}}$$
 则
-$$P(\boldsymbol{y} | \boldsymbol{x})=\frac{e^{f\left(y_{1} ; \boldsymbol{x}\right)+g\left(y_{1}, y_{2}\right)+f\left(y_{2} ; \boldsymbol{x}\right)+\cdots+g\left(y_{n-1}, y_{n}\right)+f\left(y_{n} ; \boldsymbol{x}\right)}}{\left(\sum_{y_{1} \in S} e^{f\left(y_{1} ; \boldsymbol{x}\right)}\right)\left(\sum_{y_{2} \in S} e^{g\left(y_{1}, y_{2}\right)+f\left(y_{2} ; \boldsymbol{x}\right)}\right) \cdots\left(\sum_{y_{n} \in S} e^{g\left(y_{n-1}, y_{n}\right)+f\left(y_{n} ; \boldsymbol{x}\right)}\right)}$$
+$$P(\mathbb{y} | \mathbb{x})=\frac{e^{f\left(y_{1} ; \mathbb{x}\right)+g\left(y_{1}, y_{2}\right)+f\left(y_{2} ; \mathbb{x}\right)+\cdots+g\left(y_{n-1}, y_{n}\right)+f\left(y_{n} ; \mathbb{x}\right)}}{\left(\sum_{y_{1} \in S} e^{f\left(y_{1} ; \mathbb{x}\right)}\right)\left(\sum_{y_{2} \in S} e^{g\left(y_{1}, y_{2}\right)+f\left(y_{2} ; \mathbb{x}\right)}\right) \cdots\left(\sum_{y_{n} \in S} e^{g\left(y_{n-1}, y_{n}\right)+f\left(y_{n} ; \mathbb{x}\right)}\right)}$$
 MEMM将整体的概率分布分解为每一个时间步的分布之积，所以算loss只需要把每一步的交叉熵求和。只需要每一步单独执行softmax，所以MEMM是完全可以并行的，速度跟直接逐步Softmax基本一样。
 
 虽然MEMM能克服HMM的很多弱点, 但是MEMM自身也有一个 **label bias** 问题, 就是标签偏差, 离开给定状态的转移仅相互对比，而不是与全局所有其他转移对比。转移分数是分别对每个状态的归一化, 这意味到达一个状态的所有质量必须在可能的后续状态之间分配。观察值可以影响哪个目标状态获得质量，但无法影响多少质量可以被传递。这会导致模型偏向输出选择较少的状态, 比如极端情况下, 在训练集中某个状态$s_a$只发现了有一种可能的转移$s_b$, 那么状态$s_a$别无选择，只能将所有质量传递给它的唯一的 transition output $s_b$。
@@ -124,24 +122,24 @@ MEMM将整体的概率分布分解为每一个时间步的分布之积，所以�
 ### MEMM和CRF
 在CRF的序列标注问题中，我们要计算的是条件概率
 $$
-P\left(y_{1}, \ldots, y_{n} \mid \boldsymbol{x}\right), \quad \boldsymbol{x}=\left(x_{1}, \ldots, x_{n}\right)
+P\left(y_{1}, \ldots, y_{n} \mid \mathbb{x}\right), \quad \mathbb{x}=\left(x_{1}, \ldots, x_{n}\right)
 $$
 
-CRF和MEMM的关键区别在于，MEMM使用每个状态的指数模型来确定给定当前状态的下一状态的条件概率，而CRF则使用**一个指数模型**来表示整个标签序列的联合概率, 这个概率条件依赖于给定的完整观察序列。二者区别仅在于分母（也就是归一化因子）的计算方式不同，CRF的是全局归一化的，而MEMM的是局部归一化的. 也就是说CRF是一个以观测序列$X$为全局条件的随机场. 存在函数$f(y_1,\dots,y_n;\boldsymbol{x})$，使得
+CRF和MEMM的关键区别在于，MEMM使用每个状态的指数模型来确定给定当前状态的下一状态的条件概率，而CRF则使用**一个指数模型**来表示整个标签序列的联合概率, 这个概率条件依赖于给定的完整观察序列。二者区别仅在于分母（也就是归一化因子）的计算方式不同，CRF的是全局归一化的，而MEMM的是局部归一化的. 也就是说CRF是一个以观测序列$X$为全局条件的随机场. 存在函数$f(y_1,\dots,y_n;\mathbb{x})$，使得
 $$
-P(y_1,\dots,y_n|\boldsymbol{x})=\frac{1}{Z(\boldsymbol{x})}\exp\Big(f(y_1,\dots,y_n;\boldsymbol{x})\Big)
+P(y_1,\dots,y_n|\mathbb{x})=\frac{1}{Z(\mathbb{x})}\exp\Big(f(y_1,\dots,y_n;\mathbb{x})\Big)
 $$
 
 可以得到对应得概率是
-$$P(\boldsymbol{y} | \boldsymbol{x})=\frac{e^{f\left(y_{1}, y_{2}, \ldots, y_{n} ; \boldsymbol{x}\right)}}{\sum_{y_{1}, y_{2}, \ldots, y_{n} \in S^n} e^{f\left(y_{1}, y_{2}, \ldots, y_{n} ; \boldsymbol{x}\right)}}$$
+$$P(\mathbb{y} | \mathbb{x})=\frac{e^{f\left(y_{1}, y_{2}, \ldots, y_{n} ; \mathbb{x}\right)}}{\sum_{y_{1}, y_{2}, \ldots, y_{n} \in S^n} e^{f\left(y_{1}, y_{2}, \ldots, y_{n} ; \mathbb{x}\right)}}$$
 CRF的计算困难之处在于上式的分母项包含了所有可能路径$S^n$的求和，搜索空间非常庞大.
 
 
 因此做出一些简化，假设输出之间的关联仅发生在相邻位置，并且关联是指数加性的:
 
 $$\begin{aligned}
-f\left(y_{1}, y_{2}, \ldots, y_{n} ; \boldsymbol{x}\right) &=f\left(y_{1} ; \boldsymbol{x}\right)+g\left(y_{1}, y_{2};\boldsymbol{x}\right)+\cdots+g\left(y_{n-1}, y_{n};\boldsymbol{x}\right)+f\left(y_{n} ; \boldsymbol{x}\right) \\\\
-&=f\left(y_{1} ; \boldsymbol{x}\right)+\sum_{k=2}^{n}\left(g\left(y_{k-1}, y_{k};\boldsymbol{x}\right)+f\left(y_{k} ; \boldsymbol{x}\right)\right)
+f\left(y_{1}, y_{2}, \ldots, y_{n} ; \mathbb{x}\right) &=f\left(y_{1} ; \mathbb{x}\right)+g\left(y_{1}, y_{2};\mathbb{x}\right)+\cdots+g\left(y_{n-1}, y_{n};\mathbb{x}\right)+f\left(y_{n} ; \mathbb{x}\right) \\\\
+&=f\left(y_{1} ; \mathbb{x}\right)+\sum_{k=2}^{n}\left(g\left(y_{k-1}, y_{k};\mathbb{x}\right)+f\left(y_{k} ; \mathbb{x}\right)\right)
 \end{aligned}\tag{1}$$
 
 只需要对每一个标签和每一个相邻标签对分别打分，然后将所有打分结果求和得到总分。
@@ -149,12 +147,12 @@ f\left(y_{1}, y_{2}, \ldots, y_{n} ; \boldsymbol{x}\right) &=f\left(y_{1} ; \bol
 ### Linear Chain CRF
 尽管CRF已经做了一些简化假设，但一般来说，(1)式所表示的概率模型还是过于复杂，难以求解。于是考虑到当前深度学习模型中，RNN或者层叠CNN等模型已经能够比较充分捕捉各个$y$与输入$x$的联系，因此，我们不妨考虑函数$g$跟$x$无关，那么
 $$\begin{aligned}
-f\left(y_{1}, y_{2}, \ldots, y_{n} ; \boldsymbol{x}\right) &=h\left(y_{1} ; \boldsymbol{x}\right)+g\left(y_{1}, y_{2}\right)+\cdots+g\left(y_{n-1}, y_{n}\right)+h\left(y_{n} ; \boldsymbol{x}\right) \\\\
-&=h\left(y_{1} ; \boldsymbol{x}\right)+\sum_{k=2}^{n}\left(g\left(y_{k-1}, y_{k}\right)+h\left(y_{k} ; \boldsymbol{x}\right)\right)
+f\left(y_{1}, y_{2}, \ldots, y_{n} ; \mathbb{x}\right) &=h\left(y_{1} ; \mathbb{x}\right)+g\left(y_{1}, y_{2}\right)+\cdots+g\left(y_{n-1}, y_{n}\right)+h\left(y_{n} ; \mathbb{x}\right) \\\\
+&=h\left(y_{1} ; \mathbb{x}\right)+\sum_{k=2}^{n}\left(g\left(y_{k-1}, y_{k}\right)+h\left(y_{k} ; \mathbb{x}\right)\right)
 \end{aligned}$$
-其中$g\left(y_{k-1}, y_{k}\right)$是一个有限的、待训练的参数矩阵，而单标签的打分函数$h(y_i;\boldsymbol{x})$我们可以通过RNN或者CNN来建模。因此，该模型是可以建立的，其中概率分布变为
+其中$g\left(y_{k-1}, y_{k}\right)$是一个有限的、待训练的参数矩阵，而单标签的打分函数$h(y_i;\mathbb{x})$我们可以通过RNN或者CNN来建模。因此，该模型是可以建立的，其中概率分布变为
 $$
-P(y_1,\dots,y_n|\boldsymbol{x})=\frac{1}{Z(\boldsymbol{x})}\exp\left(h(y_1;\boldsymbol{x})+\sum_{k=1}^{n-1}\Big[g(y_k,y_{k+1})+h(y_{k+1};\boldsymbol{x})\Big]\right)\tag{2}
+P(y_1,\dots,y_n|\mathbb{x})=\frac{1}{Z(\mathbb{x})}\exp\left(h(y_1;\mathbb{x})+\sum_{k=1}^{n-1}\Big[g(y_k,y_{k+1})+h(y_{k+1};\mathbb{x})\Big]\right)\tag{2}
 $$
 
 直接引用(Sutton, C. 2010)的定义:

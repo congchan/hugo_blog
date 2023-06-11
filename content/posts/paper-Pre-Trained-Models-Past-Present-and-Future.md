@@ -1,15 +1,9 @@
+---
 title: Survey - Pre-Trained Models - Past, Present and Future
 date: 2021-06-19
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- Survey
-- 2021
-- Pre-Trained Models
-
+author: "Cong Chan"
+tags: ['NLP', 'Survey', '2021', 'Pre-Trained Models']
 ---
 
 Links: https://arxiv.org/abs/2106.07139

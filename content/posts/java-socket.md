@@ -1,9 +1,8 @@
+---
 title: Java 套接字Socket
 date: 2017-02-26
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## Socket
 网络上的两个程序通过一个双向的通讯连接实现数据的交换，这个双向链路的一端称为一个Socket，确切的说Socket是个代表两台机器之间网络连接的对象。Socket是TCP/IP协议的一个十分流行的编程界面，一个Socket由一个IP地址和一个端口号唯一确定。

@@ -1,9 +1,8 @@
+---
 title: Java 格式
 date: 2017-05-29
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## Java格式化指令"
 跟在`%`后面的都是格式化指令.

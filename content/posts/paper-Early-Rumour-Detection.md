@@ -1,18 +1,9 @@
+---
 title: Early Rumour Detection
 date: 2021-05-01
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- RL
-- DQN
-- GRU
-- 2019
-- ACL
-- Rumour Detection
-
+author: "Cong Chan"
+tags: ['NLP', 'RL', 'DQN', 'GRU', '2019', 'ACL', 'Rumour Detection']
 ---
 
 2019, ACL

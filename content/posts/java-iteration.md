@@ -1,9 +1,8 @@
+---
 title: Java 迭代 Iteration
 date: 2017-05-29
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 Java提供了 foreach (enhanced for) 的循环简写语法:
 ```java

@@ -1,13 +1,9 @@
+---
 title: 位操作 - 汉明距离
 date: 2017-09-24
 mathjax: true
-categories:
-- CS
-tags:
-- Bitwise Operation
-- Software Engineer
-- Computer Science
-- Algorithms
+author: "Cong Chan"
+tags: ['Bitwise Operation', 'Software Engineer', 'Computer Science', 'Algorithms']
 ---
 求两个整数的汉明距离 hamming distance
 <!-- more -->

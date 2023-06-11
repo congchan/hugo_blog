@@ -1,13 +1,9 @@
+---
 title: 位操作 - 快速幂
 date: 2017-09-25
 mathjax: true
-categories:
-- CS
-tags:
-- Bitwise Operation
-- Software Engineer
-- Computer Science
-- Algorithms
+author: "Cong Chan"
+tags: ['Bitwise Operation', 'Software Engineer', 'Computer Science', 'Algorithms']
 ---
 如何实现快速的幂运算？
 <!-- more -->

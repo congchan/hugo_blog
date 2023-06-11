@@ -1,9 +1,8 @@
+---
 title: Java Immutability
 date: 2017-05-29
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 > An immutable data type is a data type whose instances cannot change in any observable way after instantiation.
 

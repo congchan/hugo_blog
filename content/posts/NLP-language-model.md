@@ -1,11 +1,9 @@
+---
 title: 语言模型
 date: 2017-11-12
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
+author: "Cong Chan"
+tags: ['NLP']
 ---
 ## 语言模型
 语言模型Language modeling（LM）最初是针对语音识别问题而开发的, 现在广泛用于其他NLP应用中, 比如机器翻译需要利用LM来给翻译出的句子打分.

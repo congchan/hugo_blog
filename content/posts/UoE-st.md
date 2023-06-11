@@ -1,12 +1,9 @@
-title: Software Testing
+---
+title: Inf Course Note - Software Testing
 date: 2017-09-31
 mathjax: true
-category:
-- CS
-tab:
-- Java
-- Software Engineer
-- course-note
+author: "Cong Chan"
+tags: ['Java', 'Software Engineer', 'Inf Course Note']
 ---
 爱丁堡大学信息学院课程笔记 Software Testing, Informatics, University of Edinburgh
 

@@ -1,13 +1,9 @@
+---
 title: 机器阅读理解 - LSTM与注意力机制 - 斯坦福问答数据集 (SQuAD)
 date: 2018-07-20
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- Attention
-- NLP
-- TensorFlow
+author: "Cong Chan"
+tags: ['Attention', 'NLP', 'TensorFlow']
 ---
 本文介绍注意力机制如何应用于阅读理解类任务, 并介绍了由此任务催生的一些注意力变种.
 <!-- more -->

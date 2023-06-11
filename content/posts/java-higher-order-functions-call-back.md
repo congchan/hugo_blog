@@ -1,9 +1,8 @@
+---
 title: Java 高阶函数和回调
 date: 2017-05-29
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## Higher Order Functions
 > A higher order function is a function that treats other functions as data.

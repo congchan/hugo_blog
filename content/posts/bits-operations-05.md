@@ -1,13 +1,9 @@
+---
 title: 位操作 - 不使用加减符号求和整数
 date: 2017-09-23
 mathjax: true
-categories:
-- CS
-tags:
-- Bitwise Operation
-- Software Engineer
-- Computer Science
-- Algorithms
+author: "Cong Chan"
+tags: ['Bitwise Operation', 'Software Engineer', 'Computer Science', 'Algorithms']
 ---
 ## 不使用加减符号求和整数
 不能使用`+`和`-`, 仅通过`^`和`&`操作来求和两个整数`a`.

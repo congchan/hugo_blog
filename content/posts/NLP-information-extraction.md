@@ -1,12 +1,9 @@
+---
 title: 信息抽取
 date: 2018-01-11
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
-- Information Retrieval
+author: "Cong Chan"
+tags: ['NLP', 'Information Retrieval']
 ---
 ## 信息抽取
 1997年MUC会议（MUC-7） 召开时，评测任务已经增加到5个：

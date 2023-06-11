@@ -1,10 +1,8 @@
+---
 title: Machine Learning Note - cs229 - Stanford
 date: 2017-12-05
-categories:
-- AI
-- Machine Learning
-tags:
-- Machine Learning
+author: "Cong Chan"
+tags: ['Machine Learning']
 ---
 参考
 [CS229: Machine Learning, Stanford](http://cs229.stanford.edu/notes)

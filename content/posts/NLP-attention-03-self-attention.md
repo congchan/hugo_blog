@@ -1,12 +1,9 @@
+---
 title: Transformer & Self-Attention (多头)自注意力编码
 date: 2018-11-30
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- Attention
-- NLP
+author: "Cong Chan"
+tags: ['Attention', 'NLP']
 ---
 注意力机制的原理是计算query和每个key之间的相关性$\alpha_c(q,k_i)$以获得注意力分配权重。在大部分NLP任务中，key和value都是输入序列的编码。
 <!-- more -->
@@ -101,7 +98,7 @@ out_dec = Stage3_Norm
 其实在LSTM_encoder-LSTM_decoder架构上的Attention也可以做到相同的操作, 但效果却不太好. 问题可能在于此时的Attention处理的不是纯粹的一个个序列编码, 而是经过LSTM(复杂的门控记忆与遗忘)编码后的包含前面时间步输入信息的一个个序列编码,  这个导致Attention的软寻址难度增大. 而现在是2019年, 几乎主流的文本编码方案都转投Transformer了, 可见单纯利用self-attention编码其实效率更高.
 
 ### Attention
-[Vaswani, 2017](https://arxiv.org/pdf/1706.03762.pdf)明确定义了使用的注意力算法$$\begin{eqnarray} Attention (Q,K,V) = softmax \Big( \frac{QK^T}{\sqrt{d_k}} \Big) V \end{eqnarray},$$其中$\boldsymbol{Q}\in\mathbb{R}^{n\times d_k}, \boldsymbol{K}\in\mathbb{R}^{m\times d_k}, \boldsymbol{V}\in\mathbb{R}^{m\times d_v}$. 这就是传统的Scaled Dot-Product Attention, 把这个Attention理解为一个神经网络层，将$n\times d_k$的序列$Q$编码成了一个新的$n\times d_v$的序列。因为对于较大的$d_k$，内积会数量级地放大, 太大的话softmax可能会被推到梯度消失区域, softmax后就非0即1(那就是hardmax), 所以$q \cdot  k = \sum_{i=1}^{d_k}q_i k_i$按照比例因子$\sqrt{d_k}$缩放.
+[Vaswani, 2017](https://arxiv.org/pdf/1706.03762.pdf)明确定义了使用的注意力算法$$\begin{eqnarray} Attention (Q,K,V) = softmax \Big( \frac{QK^T}{\sqrt{d_k}} \Big) V \end{eqnarray},$$其中$\mathbb{Q}\in\mathbb{R}^{n\times d_k}, \mathbb{K}\in\mathbb{R}^{m\times d_k}, \mathbb{V}\in\mathbb{R}^{m\times d_v}$. 这就是传统的Scaled Dot-Product Attention, 把这个Attention理解为一个神经网络层，将$n\times d_k$的序列$Q$编码成了一个新的$n\times d_v$的序列。因为对于较大的$d_k$，内积会数量级地放大, 太大的话softmax可能会被推到梯度消失区域, softmax后就非0即1(那就是hardmax), 所以$q \cdot  k = \sum_{i=1}^{d_k}q_i k_i$按照比例因子$\sqrt{d_k}$缩放.
 
 BERT/ALBERT中的点积attention实现:
 ```python
@@ -170,7 +167,7 @@ def attention(query, key, value, mask=None, dropout=0.0):
 ### Self-Attention (SA)
 在实际的应用中, 不同的场景的$Q,K,V$是不一样的, 如果是SQuAD的话，$Q$是文章的向量序列，$K=V$为问题的向量序列，输出就是Aligned Question Embedding。
 
-Google所说的自注意力(SA), 就是$Attention(\boldsymbol{X},\boldsymbol{X},\boldsymbol{X})$, 通过在序列自身做Attention，寻找序列自身内部的联系。Google论文的主要贡献之一是它表明了SA在序列编码部分是相当重要的，甚至可以替代传统的RNN(LSTM), CNN, 而之前关于Seq2Seq的研究基本都是关注如何把注意力机制用在解码部分。
+Google所说的自注意力(SA), 就是$Attention(\mathbb{X},\mathbb{X},\mathbb{X})$, 通过在序列自身做Attention，寻找序列自身内部的联系。Google论文的主要贡献之一是它表明了SA在序列编码部分是相当重要的，甚至可以替代传统的RNN(LSTM), CNN, 而之前关于Seq2Seq的研究基本都是关注如何把注意力机制用在解码部分。
 
 编码时，自注意力层处理来自相同位置的输入$queries, keys, value$，即编码器前一层的输出。编码器中的每个位置都可以关注前一层的所有位置.
 

@@ -1,10 +1,8 @@
+---
 title: Java 01 | 安装
 date: 2016-12-18
-categories:
-- CS
-tags:
-- Java
-- cs61b
+author: "Cong Chan"
+tags: ['Java', 'cs61b']
 ---
 ## Hello World
 参考了伯克利 Josh Hug 的 [cs61b spring 2017](datastructur.es/sp17/) 和 [cs61b spring 2018](http://sp18.datastructur.es). Lab, homework 和 project 代码实现参考 https://github.com/ShootingSpace/cs61b-data-structures.

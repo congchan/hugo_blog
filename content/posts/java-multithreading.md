@@ -1,9 +1,8 @@
+---
 title: Java 多线程
 date: 2017-02-26
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## 多线程
 线程是独立的执行空间，Java语言内置多线程功能，用类`Thread`来表达。每个Java应用程序会启动一个主线程 -- 将`main()`放在自己的执行空间的最开始处. JVM会负责主线程的启动(以及其他比如GC的系统线程). 程序员负责启动自己的建立的线程.

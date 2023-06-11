@@ -1,13 +1,9 @@
+---
 title: 位操作 - 找数问题
 date: 2017-09-24
 mathjax: true
-categories:
-- CS
-tags:
-- Bitwise Operation
-- Software Engineer
-- Computer Science
-- Algorithms
+author: "Cong Chan"
+tags: ['Bitwise Operation', 'Software Engineer', 'Computer Science', 'Algorithms']
 ---
 “找出只出现一次的数”， “找出唯二的只出现M次的数”， “找出缺失的数”等等这类问题，都可以利用异或操作的特性， 即一个整数和自己进行异或运算会归0的性质。
 <!-- more -->

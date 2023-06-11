@@ -1,11 +1,9 @@
+---
 title: 利用bert进行迁移学习
 date: 2018-12-12
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
+author: "Cong Chan"
+tags: ['NLP']
 ---
 ### NLP任务的难点
 不像图像的普适性, 语言本身有其多样性, 如语境的偏移, 背景的变化, 人与人间的分歧, 这导致以下问题:

@@ -1,13 +1,9 @@
+---
 title: Algorithms 03 - Memory 内存
 date: 2017-06-28
 mathjax: true
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
-- cs61b
-- algs4
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java', 'cs61b', 'algs4']
 ---
 ## Memory
 Bit. 0 or 1.

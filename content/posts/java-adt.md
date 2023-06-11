@@ -1,9 +1,8 @@
+---
 title: Java 抽象数据类型
 date: 2017-05-29
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## Abstract Data Types (ADTS)
 ADTS 是由其行为属性定义的抽象类型, 跟如何实现无关.

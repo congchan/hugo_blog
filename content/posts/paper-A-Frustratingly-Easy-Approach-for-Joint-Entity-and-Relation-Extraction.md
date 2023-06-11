@@ -1,15 +1,9 @@
+---
 title: A Frustratingly Easy Approach for Joint Entity and Relation Extraction
 date: 2021-04-20
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- 2020
-- NAACL
-- Extraction
-
+author: "Cong Chan"
+tags: ['NLP', '2020', 'NAACL', 'Extraction']
 ---
 
 2020, NAACL 

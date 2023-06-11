@@ -1,9 +1,8 @@
+---
 title: Java 12 | 接口 Interface
 date: 2017-02-23
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 子类在什么情况下需要多个父类？
 <!-- more -->

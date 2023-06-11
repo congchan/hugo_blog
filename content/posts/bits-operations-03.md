@@ -1,13 +1,9 @@
+---
 title: 位操作 - 风骚的走位操作
 date: 2017-09-22
 mathjax: true
-categories:
-- CS
-tags:
-- Bitwise Operation
-- Software Engineer
-- Computer Science
-- Algorithms
+author: "Cong Chan"
+tags: ['Bitwise Operation', 'Software Engineer', 'Computer Science', 'Algorithms']
 ---
 通过位移实现很多风骚的操作， 参考[这个视频](https://www.youtube.com/watch?v=7jkIUgLC29I)。
 <!-- more -->

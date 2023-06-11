@@ -1,12 +1,9 @@
+---
 title: Dynamic Programming 06 - Knapsack背包问题
 date: 2017-09-06
 mathjax: true
-categories:
-- CS
-tags:
-- Java
-- Algorithms
-- Dynamic Programming
+author: "Cong Chan"
+tags: ['Java', 'Algorithms', 'Dynamic Programming']
 ---
 ## Knapsack背包问题
 > 背包问题（Knapsack problem）是一种组合优化的NP完全问题。问题可以描述为：给定一组物品，每种物品都有自己的重量和价格，在限定的总重量内，我们如何选择，才能使得物品的总价格最高。问题的名称来源于如何选择最合适的物品放置于给定背包中。

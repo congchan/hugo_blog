@@ -1,9 +1,8 @@
+---
 title: Bash 直接启动 sublime 或 atom 等编辑器以打开或新建文件
 date: 2018-01-01
-categories:
-- Productivity
-tags:
-- Software Engineer
+author: "Cong Chan"
+tags: ['Software Engineer']
 ---
 
 程序员或者其他需要码字多的人，经常要使用编辑器如sublime、atom 和 Typora等。如果每次都要用鼠标点击才能用sublime打开文件，或者在编辑器中新建文件，那么就会有点麻烦！但你可以用一句命令解决！

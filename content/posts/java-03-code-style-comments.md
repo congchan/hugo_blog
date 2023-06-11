@@ -1,9 +1,8 @@
+---
 title: Java 03 | 代码风格 注释 Javadoc
 date: 2016-12-21
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 ## 代码风格与注释
 努力保持代码可读性。良好的编码风格的一些最重要的特点是：

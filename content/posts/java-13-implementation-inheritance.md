@@ -1,9 +1,8 @@
+---
 title: Java 13 | 接口默认方法
 date: 2017-02-24
-categories:
-- CS
-tags:
-- Java
+author: "Cong Chan"
+tags: ['Java']
 ---
 除了单纯提供声明之外，Java 8 也允许接口提供具体的实现方法。
 <!-- more -->

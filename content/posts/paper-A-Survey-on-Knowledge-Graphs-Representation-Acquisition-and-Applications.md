@@ -1,15 +1,9 @@
+---
 title: 综述 A Survey on Knowledge Graphs - Representation, Acquisition and Applications
 date: 2020-02-01
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- 2021
-- IEEE
-- Knowledge Graphs
-
+author: "Cong Chan"
+tags: ['NLP', '2021', 'IEEE', 'Knowledge Graphs']
 ---
 
 Survey: https://arxiv.org/abs/2002.00388v4

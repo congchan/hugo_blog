@@ -1,10 +1,8 @@
+---
 title: Java 04 | 类 class - 01 变量和方法
 date: 2016-12-23
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java']
 ---
 ## Class
 Java的语法是为了更容易地模拟真实世界而设计的. 比如用程序实现一只狗, 可以用定义一个类class来描述它.

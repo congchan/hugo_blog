@@ -1,12 +1,8 @@
+---
 title: Machine Learning with Scikit-learn (Sklearn) 机器学习实践
 date: 2017-12-01
-categories:
-- AI
-- Machine Learning
-tags:
-- Machine Learning
-- python
-- sklearn
+author: "Cong Chan"
+tags: ['Machine Learning', 'python', 'sklearn']
 ---
 Scikit-learn 提供一套实用的工具，用于解决机器学习中的实际问题，并配合适当的方法来制定解决方案。
 

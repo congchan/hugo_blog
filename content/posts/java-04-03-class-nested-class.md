@@ -1,10 +1,8 @@
+---
 title: Java 04 | 类 class - 03 嵌套类
 date: 2016-12-25
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
+author: "Cong Chan"
+tags: ['Software Engineer', 'Java']
 ---
 ## 嵌套类
 我们经常需要在某个类A中使用另一个类B，如果设计时我们知道类B只有在类A中有被使用的可能性, 那么我们可以把类B定义在类A中, 作为类A的嵌套类, 类A就称之为外部类. 这样做可以隐藏类名，减少全局的标识符，从而限制用户能否使用该类建立对象。这样可以提高类的抽象能力，并且强调了两个类(外围类和嵌套类)之间的主从关系。

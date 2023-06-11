@@ -1,19 +1,9 @@
+---
 title: Knowledge-Graph-Embedding的Translate族（TransE，TransH，TransR，TransD）
 date: 2020-03-05
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- 2013
-- 2014
-- 2015
-- NIPS
-- AAAI
-- ACL
-- Knowledge Graph Embedding
-
+author: "Cong Chan"
+tags: ['NLP', '2013', '2014', '2015', 'NIPS', 'AAAI', 'ACL', 'Knowledge Graph Embedding']
 ---
 
 data: WN18, WN11, FB15K, FB13, FB40K

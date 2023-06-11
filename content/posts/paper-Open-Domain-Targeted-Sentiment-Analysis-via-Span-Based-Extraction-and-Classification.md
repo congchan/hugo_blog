@@ -1,14 +1,9 @@
+---
 title: Open-Domain Targeted Sentiment Analysis via Span-Based Extraction and Classification
 date: 2020-01-24
 mathjax: true
-categories:
-- AI
-- Paper
-tags:
-- NLP
-- 2019
-- ACL
-- ABSA
+author: "Cong Chan"
+tags: ['NLP', '2019', 'ACL', 'ABSA']
 ---
 
 2019, ACL

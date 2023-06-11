@@ -1,12 +1,9 @@
+---
 title: 知识图谱补全
 date: 2020-01-01
 mathjax: true
-categories:
-- AI
-- NLP
-tags:
-- NLP
-- Knowldege Graphs Completing
+author: "Cong Chan"
+tags: ['NLP', 'Knowldege Graphs Completing']
 ---
 
 知识图谱补全

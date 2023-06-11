@@ -1,10 +1,8 @@
+---
 title: Java Hash @Override equals() hashcode()
 date: 2017-02-26
-categories:
-- CS
-tags:
-- Java
-- Software Engineer
+author: "Cong Chan"
+tags: ['Java', 'Software Engineer']
 ---
 主要介绍：
 1. Hashcode（哈希码）与 equals（判断相等）的关系

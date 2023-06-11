@@ -1,14 +1,10 @@
+---
 title: Algorithms 01 - Asymptotic Analysis 渐进分析
 date: 2017-06-26
-mathjax: true
-categories:
-- CS
-tags:
-- Software Engineer
-- Java
-- cs61b
-- algs4
+author: "Cong Chan"
+tags: ["algs4", "cs61b", "Software Engineer", "Java"]
 ---
+
 Resource and Reference:
 - CS61B Berkeley - Josh Hug
 - Algorithms Princeton - ROBERT SEDGEWICK, KEVIN WAYNE
