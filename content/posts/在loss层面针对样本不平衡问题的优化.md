@@ -156,12 +156,12 @@ $\text { Softplus }(x)=\log (1+e^x) \approx \max (x, 0)=[x]_+$
 
 利用这两个公式来改写一下公式(1)：
 
-$\begin{aligned}
+<!-- $\begin{aligned}
 L_{u n i} & \approx\left[\log \sum_{j=1}^L \exp \left(\gamma\left(s_n^j+m\right)\right) \sum_{i=1}^K \exp \left(\gamma\left(-s_p^j\right)\right)\right]_\+ \\\\
 &=\left[\log \sum_\{j=1}^L \exp \left(\gamma\left(s_n^j+m\right)\right) +\log \sum_\{i=1}^K \exp \left (\gamma\left(-s_p^i\right)\right) \right]_\+ \\\\
 &=\gamma\left[\operatorname{LSE}\left(s_n\right)-N L S E\left(s_p\right)+m\right]_\+ \\\\
 & \approx \gamma\left[\max \left(s_n\right)-\min \left(s_p\right)+m\right]_\+
-\end{aligned}$
+\end{aligned}$ -->
 
 (Hugo无法解析该公式)从知乎[^1]上截图如下：
 ![](/images/loss_uni.PNG)
@@ -204,7 +204,7 @@ $$\mathcal{L}=\sum_{i=1, i \neq y}^C \max \left(z_i-z_y, 0\right)$$
 
 然而在训练集上才刚刚让 Zy 超过 Zj，那测试集很可能就不会超过, 这样做往往会使模型的泛化性能比较差。借鉴svm里间隔的概念，我们添加一个参数，让 Zy 比 Zj 大过一定的数值才停止：
 
-$$\mathcal{L}_{\text {hinge }} =\sum_\{i=1, i \neq y}^C \max \left(z_i - z_y + m, 0\right)$$
+$$\cal L_{hinge} =\sum_\{i=1, i \neq y}^C \max \left(z_{i} - z_{y} + m, 0\right)$$
 
 如果直接把hinge loss应用在多分类上的话，当类别数C特别大时，会有大量的非目标分数得到优化，这样每次优化时的梯度幅度不等且非常巨大，极易梯度爆炸。
 
@@ -214,11 +214,11 @@ $$\mathcal{L}_{\text {hinge }} =\sum_\{i=1, i \neq y}^C \max \left(z_i - z_y + m
 
 跟之前相比，多了一个限制词“最大的”，但其实我们的目标并没有改变，“目标分数比最大的非目标分数更大”实际上等价于“目标分数比所有非目标分数更大”。这样我们的损失函数就变成了：
 
-$$\mathcal{L}=\max \left( \max_\{i \neq y} \\{z_i \\}-z_y, 0\right)$$
+$$\cal L=\max \left( \max_\{i \neq y} \\{z_i \\}-z_y, 0\right)$$
 
 在优化这个损失函数时，每次最多只会有一个+1的梯度和一个-1的梯度进入网络，梯度幅度得到了限制。但这样修改每次优化的分数过少，会使得网络收敛极其缓慢. 需要平滑，使用LogSumExp函数取代max函数：
 
-$$\mathcal{L}_{l s e}=\max \left(\log \left(\sum_\{i=1, i \neq y}^C e^{z_i}\right)-z_y, 0\right)$$
+$$\cal L_{l s e}=\max \left(\log \left(\sum_\{i=1, i \neq y}^C e^{z_i}\right)-z_y, 0\right)$$
 
 **LogSumExp函数的导数恰好为softmax函数**
 
