@@ -12,33 +12,47 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      HUGO_VERSION: 0.111.3
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2.3.4
-      with:
-        persist-credentials: false
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
+      - name: Install Dart Sass Embedded
+        run: sudo snap install dart-sass-embedded
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Build with Hugo
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/" 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public
 
-    # Setup Hugo
-    - name: Hugo setup
-      uses: peaceiris/actions-hugo@v2.5.0
-      with:
-        hugo-version: 'latest'
-        # Download (if necessary) and use Hugo extended version. Example: true
-        extended: false
-
-    # Runs Hugo to build the Static Site
-    - name: Run Hugo
-      run: |
-                hugo --verbose
-
-    # Deploy the Static Site to Public Repo (GitHub Pages)
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4.3.3
-      with:
-        token:  ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        repository-name: congchan/congchan.github.io
-        branch: master # The branch the action should deploy to.
-        folder: public # The folder the action should deploy.
-        single-commit: true
-        commit-message: "Deploy by source"
+      # Deploy the Static Site to Public Repo (GitHub Pages)
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          token:  ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          repository-name: congchan/congchan.github.io
+          branch: master # The branch the action should deploy to.
+          folder: public # The folder the action should deploy.
+          single-commit: true
+          commit-message: "Deploy by source"
